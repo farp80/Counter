@@ -3,6 +3,7 @@
     background-color: black;
     font-size: 10em;
     color: white;
+    padding: 15px 15px 15px 15px;
 }
 
 i{
@@ -12,7 +13,10 @@ i{
 .divBorder{
     border: 1px solid;
     border-radius: 10px !important;
-    padding-left: 5px;
+}
+
+.row{
+     padding: 15px 15px 15px 15px;
 }
 /*
 
