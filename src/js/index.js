@@ -7,9 +7,17 @@ import "bootstrap";
 
 //include your index.scss file into the bundle
 import "../styles/index.scss";
-
+import { counterAlgorithm } from "./helper.js";
 //import your own components
-import { Home } from "./component/home.js";
+import { Clock } from "./component/clock.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let count = 0;
+setInterval(() => {
+	const countArray = counterAlgorithm(count);
+	count++;
+	ReactDOM.render(
+		<Clock clockLength={countArray} />,
+		document.querySelector("#app")
+	);
+}, 1000);
